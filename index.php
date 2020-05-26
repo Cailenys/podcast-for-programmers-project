@@ -1,3 +1,8 @@
+<?php
+
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +11,11 @@
     <title> Welcome to Podcast for Programmers! </title>
 </head>
 <body>
+<?php
+
+include './includes/navigation.php'; // This file's code will execute right here in the file.
+ 
+?>
    <h1> Hello! <h1>
 </body>
 </html>
