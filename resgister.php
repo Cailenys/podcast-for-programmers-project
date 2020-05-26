@@ -1,66 +1,79 @@
 <?php
-include("include/classes/Account.php");
+	include("includes/classes/Account.php");
 
-$account = new Account(); // Calling the register function
-$account->register();
+	$account = new Account();
 
-include("include/handlers/register-handler.php");
-include("include/handlers/login-handler.php");
+	include("includes/handlers/register-handler.php");
+	include("includes/handlers/login-handler.php");
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Welcome to Podcast for Programmers </title>
+	<title>Welcome to Slotify!</title>
 </head>
 <body>
-    <div id="inputContainer">
-        <form id="loginForm" action="resgister.php" method ="POST">
-            <h2> Login to your account </h2>
-            <p>
-                <label for="loginUsername"> Username </label>
-                <input id="loginUsername" name="loginUsername" type="text" placeholder ="e.g Cail" required>
-            </p>
-            <p>
-                <label for="loginPassword"> Password </label>
-                <input id="loginPassword" name="loginPassword" type="password" placeholder= "Your password" required>
-            </p>
-            <button type="submit" name="loginButton">Login</button>
-        </form>
 
-        <form id="registerForm" action="resgister.php" method ="POST">
-            <h2> Create your free account </h2>
+	<div id="inputContainer">
+		<form id="loginForm" action="register.php" method="POST">
+			<h2>Login to your account</h2>
+			<p>
+				<label for="loginUsername">Username</label>
+				<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. Cail" required>
+			</p>
+			<p>
+				<label for="loginPassword">Password</label>
+				<input id="loginPassword" name="loginPassword" type="password" placeholder="Your password" required>
+			</p>
 
-            <p>
-                <label for="username"> Username </label>
-                <input id="username" name="username" type="text" placeholder ="e.g Cail" required>
-            </p>
+			<button type="submit" name="loginButton">Login</button>
+			
+		</form>
 
-            <p>
-                <label for="email"> Email </label>
-                <input id="email" name="email" type="eamil" placeholder ="e.g cailenys@ualberta.ca" required>
-            </p>
 
-            <p>
-                <label for="email2"> Confim email </label>
-                <input id="email2" name="email" type="eamil2" placeholder ="e.g cailenys@ualberta.ca" required>
-            </p>
-           
-            <p>
-                <label for="password"> Password </label>
-                <input id="password" name="password" type="password" placeholder= "Your password" required>
-                </p>
 
-            <p>
-                <label for="password2"> Confirm password </label>
-                <input id="password2" name="password2" type="password"  placeholder= "Your password" required>
-            </p>
-            <button type="submit" name="registerButton">Sing up</button>
+		<form id="registerForm" action="register.php" method="POST">
+			<h2>Create your free account</h2>
+			<p>
+				<label for="username">Username</label>
+				<input id="username" name="username" type="text" placeholder="e.g. Cail" required>
+			</p>
 
-        </form>
-  
-    </div>
+			<p>
+				<label for="firstName">First name</label>
+				<input id="firstName" name="firstName" type="text" placeholder="e.g. Cailenys" required>
+			</p>
+
+			<p>
+				<label for="lastName">Last name</label>
+				<input id="lastName" name="lastName" type="text" placeholder="e.g. Salazar" required>
+			</p>
+
+			<p>
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" placeholder="e.g. cailenys@ualberta.ca" required>
+			</p>
+
+			<p>
+				<label for="email2">Confirm email</label>
+				<input id="email2" name="email2" type="email" placeholder="e.g. cailenys@ualberta.ca" required>
+			</p>
+
+			<p>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password" placeholder="Your password" required>
+			</p>
+
+			<p>
+				<label for="password2">Confirm password</label>
+				<input id="password2" name="password2" type="password" placeholder="Your password" required>
+			</p>
+
+			<button type="submit" name="registerButton">Sing up</button>
+			
+		</form>
+
+
+	</div>
+
 </body>
 </html>
