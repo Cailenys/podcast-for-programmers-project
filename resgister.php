@@ -1,4 +1,9 @@
 <?php
+include("include/classes/Account.php");
+
+$account = new Account(); // Calling the register function
+$account->register();
+
 include("include/handlers/register-handler.php");
 include("include/handlers/login-handler.php");
 ?>

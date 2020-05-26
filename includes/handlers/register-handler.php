@@ -18,25 +18,6 @@
         return $inputText;
     }
 
-    function validateUsername($un){
-
-    }
-
-    function validateFirstName($fn){
-        
-    }
-
-    function validateLastName($ln){
-        
-    }
-
-    function validateEmails($em, $em2){
-        
-    }
-
-    function validatePassword($pw, $pw2){
-        
-    }
 
     if(isset($_POST['registerButton'])){ //Resgister button was pressed
       $username = sanitizeFormUsername($_POST['username']);
@@ -53,10 +34,6 @@
       
       $password2 = sanitizeFormPassword($_POST['password2']);  
 
-      validateUsername($username);
-      validateUsername($firstName);
-      validateUsername($lastName);
-      validateUsername($email, $email2);
-      validateUsername($password, $password2);
+    
     }
 ?>
