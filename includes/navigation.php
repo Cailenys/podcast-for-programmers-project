@@ -6,9 +6,9 @@
     </li>
     
     <li>
-      <a href="../resgister.php">Register page</a>
+      <a href="../register.php">Register page</a>
     </li>
-    
+
   </ul>
 </nav>
 <?php // By default, anything written in a PHP file will be sent to
