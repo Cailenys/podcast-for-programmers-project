@@ -7,14 +7,14 @@ function sanitizeFormPassword($inputText) {
 
 function sanitizeFormUsername($inputText) {
 	$inputText = strip_tags($inputText);
-	$inputText = str_replace(" ", "", $inputText);
+	$inputText = str_replace(" ", "", $inputText); //Restricting username without space
 	return $inputText;
 }
 
 function sanitizeFormString($inputText) {
 	$inputText = strip_tags($inputText);
 	$inputText = str_replace(" ", "", $inputText);
-	$inputText = ucfirst(strtolower($inputText));
+	$inputText = ucfirst(strtolower($inputText)); //First letter of username will be capitalized and the rest of the string will be lowercase
 	return $inputText;
 }
 
@@ -36,5 +36,6 @@ if(isset($_POST['registerButton'])) {
 	}
 
 }
+
 
 ?>
