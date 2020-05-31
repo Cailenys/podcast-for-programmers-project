@@ -2,11 +2,11 @@
   <h2>Website Navigation</h2>
   <ul>
     <li>
-      <a href="../index.php">Home</a>
+      <a href="./index.php">Home</a>
     </li>
     
     <li>
-      <a href="../register.php">Register page</a>
+      <a href="./register.php">Register page</a>
     </li>
 
   </ul>

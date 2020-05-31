@@ -1,4 +1,5 @@
 <?php
+
  class Constants {
      public static $userNameCharacters = "Your username must be between 5 and 25 characters";
      public static $firtNameCharacters ="Your first name must be between 2 and 25 characters";

@@ -1,9 +1,11 @@
 <?php
-	class Account {
 
+	class Account {
+        private $conn; // Passing in the connection variable and assign it to the class
 		private $errorArray;
 
-		public function __construct() {
+		public function __construct($conn) {
+			$this->conn = $conn;
 			$this->errorArray = array();
 		}
 
@@ -15,15 +17,25 @@
 			$this->validatePasswords($pw, $pw2);
 
 			if(empty($this->errorArray) == true) {
-				//Insert into db
-				return true;
+				//Insert into the database
+				return $this->insertUserDetails($un, $fn, $ln, $em, $pw);
 			}
 			else {
 				return false;
 			}
-
 		}
 
+		private function insertUserDetails($un, $fn, $ln, $em, $pw){
+		  $encryptedPW = md5($pw);  // md5 is a encryption method. So password will be a gui of letters and numbers like this: f8f4fjdhs78s1afgfs
+		  $profilePic = "/assets/images/profile-pics/Duck-in-the-pool.png";
+		  $date = date("Y-m-d");
+	     
+		  $result = mysqli_query($this->conn, "INSERT INTO users VALUES (NULL, '$un', '$fn', '$ln', '$em', '$encryptedPW', '$date', '$profilePic')");
+		  
+		  return $result;
+		}
+		
+		
 		public function getError($error) {
 			if(!in_array($error, $this->errorArray)) {
 				$error = "";
