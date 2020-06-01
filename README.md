@@ -79,6 +79,4 @@ The way how you will run this script is by introducing values in the sign-up for
 
 
 
-[Back To The Top](#Podcast-for-Programmers)
-
 
