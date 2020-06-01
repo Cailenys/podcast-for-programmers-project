@@ -8,7 +8,7 @@
 ### Table of Contents
 
 - [Description](#description)
-- [How To Use](#how-to-use)
+- [Testing it out](#Testing-it-out)
 - [References](#references)
 - [License](#license)
 - [Author Info](#author-info)
