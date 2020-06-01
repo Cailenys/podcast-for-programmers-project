@@ -63,7 +63,7 @@ The way how you will run this script is by introducing values in the sign-up for
 
 - PHP Connect to MySQL [Link](https://www.w3schools.com/php/php_mysql_connect.asp)
 
-- SQL INSERT INTO Statement[Link](https://www.w3schools.com/sql/sql_insert.asp)
+- SQL INSERT INTO Statement [Link](https://www.w3schools.com/sql/sql_insert.asp)
 
 ---
 
