@@ -26,8 +26,9 @@
 		<form id="loginForm" action="register.php" method="POST">
 			<h2>Login to your account</h2>
 			<p>
+				<?php echo $account->getError(Constants::$loginFailed); ?>	
 				<label for="loginUsername">Username</label>
-				<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. Donald" required>
+				<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. SuperCody" required>
 			</p>
 			<p>
 				<label for="loginPassword">Password</label>
@@ -46,13 +47,13 @@
 				<?php echo $account->getError(Constants::$usernameCharacters); ?>	
 				<?php echo $account->getError(Constants::$usernameTaken); ?>
 				<label for="username">Username</label>
-				<input id="username" name="username" type="text" placeholder="e.g. Donald" value="<?php getInputValue('username') ?>" required>
+				<input id="username" name="username" type="text" placeholder="e.g. SuperCody" value="<?php getInputValue('username') ?>" required>
 			</p>
 
 			<p>
 				<?php echo $account->getError(Constants::$firstNameCharacters); ?>
 				<label for="firstName">First name</label>
-				<input id="firstName" name="firstName" type="text" placeholder="e.g. Cody" value="<?php getInputValue('firstName') ?>" required>
+				<input id="firstName" name="firstName" type="text" placeholder="e.g. Donald" value="<?php getInputValue('firstName') ?>" required>
 			</p>
 
 			<p>
