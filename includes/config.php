@@ -1,20 +1,11 @@
-<!-- Open the Connection to MySQL
-Code source: W3Schools https://www.w3schools.com/php/php_mysql_connect.asp -->
-
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-$servername = "localhost";
-$username = "root";
-$password = "";
+	ob_start();
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password);
+	$timezone = date_default_timezone_set("Canada/Mountain");
 
-// Check connection
-if (!$conn) {
-  die("Connection failed: ". mysqli_connect_error());
-}
-echo "Connected successfully";
+	$con = mysqli_connect("localhost", "root", "", "podcasts_for_programmers");
+
+	if(mysqli_connect_errno()) {
+		echo "Failed to connect: " . mysqli_connect_errno();
+	}
 ?>

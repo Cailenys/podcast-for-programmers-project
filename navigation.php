@@ -6,7 +6,7 @@
     </li>
     
     <li>
-      <a href="./resgister.php">Register page</a>
+      <a href="./register.php">Register page</a>
     </li>
     
   </ul>

@@ -13,7 +13,7 @@
 <body>
 <?php
 
-include './includes/navigation.php'; // This file's code will execute right here in the file.
+include("./navigation.php"); // Navigation - for testing
  
 ?>
    <h1> Hello! <h1>

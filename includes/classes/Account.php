@@ -1,10 +1,11 @@
 <?php
 	class Account {
-		private $conn; // Passing in the connection variable and assign it to the class
+
+		private $con; // Passing in the connection variable and assign it to the class
 		private $errorArray;
 
-		public function __construct($conn) {
-			$this->conn = $conn;
+		public function __construct($con) {
+			$this->con = $con;
 			$this->errorArray = array();
 		}
 
@@ -34,10 +35,10 @@
 
 		private function insertUserDetails($un, $fn, $ln, $em, $pw) {
 			$encryptedPw = md5($pw); // md5 is a encryption method. So password will be a gui of letters and numbers like this: f8f4fjdhs78s1afgfs
-			$profilePic = "assets/images/profile-pics/head_emerald.png";
+			$profilePic = "/assets/images/profile-pics/Duck-in-the-pool.png";
 			$date = date("Y-m-d");
 
-			$result = mysqli_query($this->conn, "INSERT INTO users VALUES (NULL, '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
+			$result = mysqli_query($this->con, "INSERT INTO users VALUES (NULL, '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
 
 			return $result;
 		}
