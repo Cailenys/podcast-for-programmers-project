@@ -1,0 +1,85 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#background {
+  background-color: #130A09;
+  background-image: url(https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50bf/5ec9989090bd560c7d1d512a/ddf050b8b0da6a7e534a619caa838c54/listen-music.jpg);
+  background-size: cover;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+#loginContainer * {
+  color: whitesmoke;
+  font-family: 'Source Code Pro', monospace, "sans-serif", "Helvetica", "Arial";
+  font-weight: normal;
+  line-height: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #23303A;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #23303A;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #23303A;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #23303A;
+}
+
+#loginContainer {
+  width: 80%;
+  margin: 0 auto 0 -20px;
+  position: relative;
+  max-width: 1024px;
+}
+
+#inputContainer {
+  width: 400px;
+  padding: 45px;
+  float: left;
+  border-right: 1px solid #999;
+}
+
+#inputConatiner h2 {
+  text-align: center;
+}
+
+#inputContainer input[type="text"],
+#inputContainer input[type="email"],
+#inputContainer input[type="password"] {
+  display: block;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid whitesmoke;
+  height: 27 px;
+  line-height: 27px;
+  width: 100%;
+}
+
+#inputContainer button {
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  border-radius: 250px;
+  display: block;
+  font-size: 15px;
+  margin: 20px auto;
+  height: 41px;
+  width: 100%;
+}
+/*# sourceMappingURL=register.css.map */

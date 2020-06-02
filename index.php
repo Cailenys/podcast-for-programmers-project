@@ -1,6 +1,6 @@
 <?php
 
-includes("includes/config.php");
+include("includes/config.php");
 
 //session_destroy(); Manually logout
 
