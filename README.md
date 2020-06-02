@@ -1,7 +1,7 @@
 # Podcast for Programmers
 ![Project Logo](https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50db/250x250/dace8e5b3bb3cc9a98d4603c4f784e55/Logo-readme.png)
 
-> Download free resources to listen to at any time!
+> Download free resources to listen to at any time!😃🙌
 
 ---
 
@@ -33,7 +33,7 @@ This podcast application is dedicated to the programming community. So developer
 
 ---
 
-## Testing it out!
+## Testing it out!🤓
 
 1. Clone this repository
 2. Open the main folder with Visual Studio or the code editor of your preference.
@@ -76,7 +76,12 @@ The way how you will run this script is by introducing values in the sign-up for
 
 [Back To The Top](#Podcast-for-Programmers)
 
+---
 
+## License
 
+Copyright (c) [2020](https://www.ualberta.ca/index.html) Univerty of  Alberta - Canada
+
+[Back To The Top](#Podcast-for-Programmers)
 
 
