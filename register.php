@@ -19,6 +19,8 @@
 <html>
 <head>
 <title>Welcome to Podcasts for Programmers!</title>
+<link rel="stylesheet" type="text/css" href="assets/css/register.css">
+
 </head>
 <body>
 

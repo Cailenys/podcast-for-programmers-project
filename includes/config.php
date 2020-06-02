@@ -1,5 +1,7 @@
 <?php
 	ob_start();
+	
+	session_start(); //Enables the user session
 
 	$timezone = date_default_timezone_set("Canada/Mountain");
 

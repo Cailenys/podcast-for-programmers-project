@@ -1,6 +1,15 @@
 <?php
 
- 
+includes("includes/config.php");
+
+//session_destroy(); Manually logout
+
+if(isset($_SESSION['userLoggedIn'])){
+    $userLoggedIn = $_SESSION['userLoggedIn'];
+}
+ else{
+     header("Location: resgister.php"); // It will redirect the user to the register page
+ }
 ?>
 
 <!DOCTYPE html>
