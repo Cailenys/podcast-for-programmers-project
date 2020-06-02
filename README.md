@@ -80,7 +80,7 @@ The way how you will run this script is by introducing values in the sign-up for
 
 ## License
 
-//Copyright (c) [2020](https://www.ualberta.ca/index.html) Univerty of  Alberta - Canada
+Copyright (c) [2020](https://www.ualberta.ca/index.html) Univerty of  Alberta - Canada
 
 [Back To The Top](#Podcast-for-Programmers)
 
