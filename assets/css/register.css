@@ -82,4 +82,8 @@ html, body {
   height: 41px;
   width: 100%;
 }
+
+#inputContainer button:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=register.css.map */

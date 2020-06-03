@@ -21,6 +21,8 @@
 <title>Welcome to Podcasts for Programmers!</title>
 <link rel="stylesheet" type="text/css" href="assets/css/register.css">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+ 
 </head>
 <body>
     <div id="background">
