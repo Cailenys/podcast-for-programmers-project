@@ -1,3 +1,7 @@
+*{
+    font-family: 'Source Code Pro', monospace, "sans-serif", "Helvetica", "Arial" ;
+}
+
 html,body{
     padding:0;
     margin:0;
@@ -15,7 +19,6 @@ html,body{
 
 #loginContainer *{
     color: whitesmoke;
-    font-family: 'Source Code Pro', monospace, "sans-serif", "Helvetica", "Arial" ;
     font-weight: normal;
     line-height: 1em;
     box-sizing: border-box;

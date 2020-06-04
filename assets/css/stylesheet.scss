@@ -1,3 +1,8 @@
+*{
+    font-family: 'Source Code Pro', monospace, "sans-serif", "Helvetica", "Arial" ;
+    color: whitesmoke;
+}
+
 html, body {
 	padding: 0;
 	margin: 0;
@@ -22,9 +27,15 @@ html, body {
 
 #playingLeft,
 #playingRight{
+    position: relative;
+    margin-top: 16px;
+}
+
+#playingRight{
     width: 30%;
     min-width: 180px;
 }
+
 #playingCenter{
     width: 40%;
     max-width: 700px;
@@ -35,6 +46,7 @@ html, body {
 
 #playingBar .content{
     width: 100%;
+    height: 57px;
 }
 
 .playerControls .buttons{
@@ -99,4 +111,36 @@ html, body {
 
 .playbackBar .progress{
     margin-top: 3px;
+}
+
+#playingLeft .react{
+    height:100%;
+    max-width: 57px;
+    margin-right: 15px;
+    float: left;
+    background-size:cover;
+}
+
+.podcastInfo{
+    display: table;
+}
+
+#playingLeft .podcastInfo .podcastName p{
+    margin: 6px 0;
+    display: inline-block;
+    width:100%;
+}
+
+/*#playingLeft .podcastInfo .mentorname p {
+font-size: 12px;
+color: #a0a0a0;
+}*/
+
+.volumeBar{
+    position: absolute;
+    right: 0;
+}
+
+.volumeBar .progressBar{
+    width: 125px;
 }
