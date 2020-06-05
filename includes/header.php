@@ -1,6 +1,6 @@
 <?php
 include("includes/config.php");
-
+include("includes/classes/Mentor.php");
 //session_destroy(); LOGOUT
 
 if(isset($_SESSION['userLoggedIn'])) {
