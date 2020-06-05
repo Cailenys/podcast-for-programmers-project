@@ -7,20 +7,12 @@ else {
 	header("Location: index.php");
 }
 
-$podcastQuery = mysqli_query($con, "SELECT * FROM podcastcover WHERE id='$albumId'");
-$album = mysqli_fetch_array($podcastQuery);
-
-$mentor = new Mentor($con, $album['mentor']);
-
-echo $album['title'] . "<br>";
+$album = new Album($con, $albumId);
+$mentor = $album->getMentor();
+echo $album->getTitle() . "<br>";
 echo $mentor->getName();
 
 ?>
-
-
-
-
-
 
 
 <?php include("includes/footer.php"); ?>
