@@ -1,6 +1,6 @@
 <?php
-include("./navigation.php"); // Navigation - for testing
 include("includes/config.php");
+include("./navigation.php"); // Navigation - for testing
 
 //session_destroy(); LOGOUT Manually logout
 
@@ -10,6 +10,9 @@ if(isset($_SESSION['userLoggedIn'])) {
 else {
 	header("Location: register.php");// It will redirect the user to the register page
 }
+
+
+
 
 ?>
 
@@ -22,6 +25,24 @@ else {
     <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
 </head>
 <body>
+<!--Outputting the podcast-covers -->
+<h1 class="pageHeadingBig"> You might also like</h1>
+<div class="gridViewContainer">
+	<?php
+	  $podcastcoverQuery = mysqli_query($con, "SELECT * FROM podcasts ORDER BY RAND() LIMIT 10");
+	   while($row=mysqli_fetch_array($podcastcoverQuery)){
+		   echo "<div class='gridViewItem'>   
+		<img src='" . $row['podcastcover']."'>
+			<div class='gridViewInfo'>"
+			.$row['title'].
+			"</div>
+		   </div>";
+	   }
+     
+	?>
+
+</div>
+<!---------------------------------------------------->
 	<div id="playingBarContainer">
 
 		<div id="playingBar">
@@ -29,7 +50,7 @@ else {
 			<div id="playingLeft">
 				<div class="content">
 					<span class="albumLink">
-						<img src="./assets/images/album-pics/react-album.png" class="react">
+					<img src="./assets/images/podcast-covers/talk-python-logo-mic.png" class="podcastCover">
 					</span>
 
 					<div class="podcastInfo">
