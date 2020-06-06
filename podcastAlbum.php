@@ -24,6 +24,29 @@ $mentor = $album->getMentor();
 	</div>
 
 </div>
+
+
+<div class="podcastListContainer">
+	<ul class="podcastList">
+		
+		<?php
+		$podcastIdArray = $album->getPodcastIds();
+
+		$i = 1;
+		foreach($podcastIdArray as $podcastId) {
+             echo $podcastId. "<br>";
+		
+		}
+
+		?>
+
+	
+
+	</ul>
+</div>
+
+
+
 <?php include("includes/footer.php"); ?>
 
 
