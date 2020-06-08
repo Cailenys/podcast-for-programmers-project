@@ -1,92 +1,104 @@
-*{
-    font-family: 'Source Code Pro', monospace, "sans-serif", "Helvetica", "Arial" ;
+html, 
+body {
+    
+	padding: 0;
+	margin: 0;
+	height: 100%;
 }
 
-html,body{
-    padding:0;
-    margin:0;
-    height: 100%;
+*:focus {
+    outline: none;
 }
 
 #background {
-    background-color: #130A09;
-    background-image: url(https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50bf/5ec9989090bd560c7d1d512a/ddf050b8b0da6a7e534a619caa838c54/listen-music.jpg);
+	background-color: #130A09;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50bf/5ec9989090bd560c7d1d512a/4434469e6c35fbce5eca893b2a7f0ecf/brown-background.jpg);
+    background-position: center;
     background-size: cover;
     display: table;
     height: 100%;
     width: 100%;
 }
 
-#loginContainer *{
-    color: whitesmoke;
-    font-weight: normal;
-    line-height: 1em;
-    box-sizing: border-box;
+#loginContainer * {
+   
+	color: #fff;
+    font-family: 'Source Code Pro', monospace, "sans-serif", "Helvetica", "Arial" ;
+	font-weight: normal;
+	line-height: 1em;
+	box-sizing: border-box;
+}
+
+#loginContainer {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	max-width: 1024px;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #23303A;
+    color:    #fff;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color: #23303A;
+   color:    #fff;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:#23303A;
+   color:    #fff;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:#23303A;
+   color:    #fff;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
-   color:#23303A;
-}
-
-::placeholder { /* Most modern browsers support this now. */
-   color:#23303A;
-}
-#loginContainer {
-    width: 80%;
-    margin: 0 auto 0 -20px;
-    position: relative;
-    max-width:1024px;
+   color:    #fff;
 }
 
 #inputContainer {
-    width:400px;
+    margin-top: 80px;
+    width: 400px;
     padding: 45px;
     float: left;
-    border-right: 1px solid #999;
 }
 
-#inputConatiner h2{
-    text-align: center;
+#inputContainer h2 {
+	text-align: center;
 }
+
 #inputContainer input[type="text"],
 #inputContainer input[type="email"],
-#inputContainer input[type="password"]{
-    display: block;
+#inputContainer input[type="password"] {
+	display: block;
     background-color: transparent;
     border: 0;
-    border-bottom: 1px solid whitesmoke;
-    height: 27 px;
+    border-bottom: 1px solid #fff;
+    height: 27px;
     line-height: 27px;
     width: 100%;
 }
 
-#inputContainer button{
-    background-color: transparent;
-    border: 2px solid whitesmoke;
-    border-radius: 250px;
+#inputContainer label {
+	color: #a0a0a0;
+    font-size: 13px;
+    margin-top: 15px;
     display: block;
-    font-size: 15px;
+}
+
+#inputContainer button {
+	background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 250px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 1px;
     margin: 20px auto;
     height: 41px;
     width: 100%;
 }
 
-#inputContainer button:hover{
-    cursor: pointer;
+#inputContainer button:hover {
+	cursor: pointer;
 }
 
 .hasAccountText span {
@@ -94,7 +106,6 @@ html,body{
     font-size: 12px;
     cursor: pointer;
 }
-
 
 .hasAccountText {
 	text-align: center;
@@ -106,44 +117,33 @@ html,body{
 }
 
 #loginText {
-    padding: 45px;
-    display: table-cell;
+ font-size: 14px;
 }
 
-#inputContainer label {
-	color: #a0a0a0;
-    font-size: 13px;
-    margin-top: 15px;
-    display: block;
-}
-
-.loginText h1 {
-    //color:yellow;
-    font-size: 50px;
+#loginText h1 {
+    margin-top: 120px;
+    color: #06ee63;
+    font-size: 25px;
     font-weight: bold;
- 
 }
 
-.loginText h2 {
-    margin: 35px 0 0 35px;
+#loginText h2 {
+    margin: 35px 0;
 }
 
-.loginText ul {
+#loginText ul {
     padding: 0;
 }
 
-.loginText li {
-    font-size: 20px;
+#loginText li {
+    font-size: 15px;
     list-style-type: none;
     padding: 5px 30px;
-    //background: url(../images/icons/checkmark.png) no-repeat 0 0;
+    background: url(../images/icons/checkmark.png) no-repeat 0 0;
 }
 
 #inputContainer .errorMessage {
-    color: red;
+    color:red;
     font-size: 12px;
     display: block;
 }
-
-
-

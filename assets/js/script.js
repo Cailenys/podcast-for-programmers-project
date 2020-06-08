@@ -24,9 +24,9 @@ $(window).scroll(function() {
 $(document).on("change", "select.playlist", function() {
 	var select = $(this);
 	var playlistId = select.val();
-	var songId = select.prev(".songId").val();
+	var podcastId = select.prev(".podcastId").val();
 
-	$.post("includes/handlers/ajax/addToPlaylist.php", { playlistId: playlistId, songId: songId})
+	$.post("includes/handlers/ajax/addToPlaylist.php", { playlistId: playlistId, podcastId: podcastId})
 	.done(function(error) {
 
 		if(error != "") {
@@ -92,7 +92,7 @@ function openPage(url) {
 }
 
 function removeFromPlaylist(button, playlistId) {
-	var songId = $(button).prevAll(".songId").val();
+	var songId = $(button).prevAll(".podcastId").val();
 
 	$.post("includes/handlers/ajax/removeFromPlaylist.php", { playlistId: playlistId, songId: songId })
 	.done(function(error) {
@@ -107,21 +107,21 @@ function removeFromPlaylist(button, playlistId) {
 	});
 }
 
+
 function createPlaylist() {
 
-	var popup = prompt("Please enter the name of your playlist");
+	var popup = prompt("Please enter the name of your playlist"); // Using alert promt to create playlist name with the browser
 
 	if(popup != null) {
 
 		$.post("includes/handlers/ajax/createPlaylist.php", { name: popup, username: userLoggedIn })
-		.done(function(error) {
+		.done(function(error) { // doe is a more recently preferred way to hadle Ajax responses
 
 			if(error != "") {
-				alert(error);
+				alert(error); // alert query
 				return;
 			}
 
-			//do something when ajax returns
 			openPage("yourMusic.php");
 		});
 
@@ -133,7 +133,7 @@ function deletePlaylist(playlistId) {
 	var prompt = confirm("Are you sure you want to delte this playlist?");
 
 	if(prompt == true) {
-
+         
 		$.post("includes/handlers/ajax/deletePlaylist.php", { playlistId: playlistId })
 		.done(function(error) {
 
@@ -142,7 +142,6 @@ function deletePlaylist(playlistId) {
 				return;
 			}
 
-			//do something when ajax returns
 			openPage("yourMusic.php");
 		});
 
@@ -158,10 +157,10 @@ function hideOptionsMenu() {
 }
 
 function showOptionsMenu(button) {
-	var songId = $(button).prevAll(".songId").val();
+	var podcastId = $(button).prevAll(".podcastId").val();
 	var menu = $(".optionsMenu");
 	var menuWidth = menu.width();
-	menu.find(".songId").val(songId);
+	menu.find(".podcastId").val(podcastId);
 
 	var scrollTop = $(window).scrollTop(); //Distance from top of window to top of document
 	var elementOffset = $(button).offset().top; //Distance from top of document
@@ -181,7 +180,7 @@ function formatTime(seconds) {
 
 	var extraZero = (seconds < 10) ? "0" : "";
 
-	return minutes + ":" + extraZero + seconds;
+	return minutes + ":" + extraZero + seconds; // e.g: 5.4 seg will be 5.04 seg
 }
 
 function updateTimeProgressBar(audio) {
@@ -197,17 +196,17 @@ function updateVolumeProgressBar(audio) {
 	$(".volumeBar .progress").css("width", volume + "%");
 }
 
-function playFirstSong() {
-	setPodcast(tempPlaylist[0], tempPlaylist, true);
+function playFirstPodcast() {
+	setTrack(tempPlaylist[0], tempPlaylist, true);
 }
 
 function Audio() {
 
-	this.currentlyPlaying;
-	this.audio = document.createElement('audio'); //Creates and audio html element
-
+	this.currentlyPlaying; // It keeps track of the podcast the is currently playing
+	this.audio = document.createElement('audio');
+     //$("body").append(this.audio); Test
 	this.audio.addEventListener("ended", function() {
-		nextSong();
+		nextPodcast();
 	});
 
 	this.audio.addEventListener("canplay", function() {
@@ -226,9 +225,9 @@ function Audio() {
 		updateVolumeProgressBar(this);
 	});
 
-	this.setPodcast = function(podcast) {
-		this.currentlyPlaying = podcast;
-		this.audio.src = podcast.path;
+	this.setTrack = function(track) {
+		this.currentlyPlaying = track;
+		this.audio.src = track.path; // Path is the path of the podcast in the database
 	}
 
 	this.play = function() {

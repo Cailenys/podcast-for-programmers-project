@@ -17,57 +17,57 @@
 
 <html>
 <head>
-<title>Welcome to Podcasts for Programmers!</title>
+	<title>Welcome to Podcast for Programmers!</title>
 
-<link rel="stylesheet" type="text/css" href="assets/css/register.css">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/js/register.js"></script>
- 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/js/register.js"></script>
 </head>
 <body>
 	<?php
 
-		if(isset($_POST['registerButton'])) {
-			echo '<script>
-					$(document).ready(function() {
-						$("#loginForm").hide();
-						$("#registerForm").show();
-					});
-				</script>';
-		}
-		else {
-			echo '<script>
-					$(document).ready(function() {
-						$("#loginForm").show();
-						$("#registerForm").hide();
-					});
-				</script>';
-		}
+	if(isset($_POST['registerButton'])) {
+		echo '<script>
+				$(document).ready(function() {
+					$("#loginForm").hide();
+					$("#registerForm").show();
+				});
+			</script>';
+	}
+	else {
+		echo '<script>
+				$(document).ready(function() {
+					$("#loginForm").show();
+					$("#registerForm").hide();
+				});
+			</script>';
+	}
 
 	?>
+	
 
-    <div id="background">
-		
+	<div id="background">
+
 		<div id="loginContainer">
+
 			<div id="inputContainer">
 				<form id="loginForm" action="register.php" method="POST">
 					<h2>Login to your account</h2>
 					<p>
-						<?php echo $account->getError(Constants::$loginFailed); ?>	
+						<?php echo $account->getError(Constants::$loginFailed); ?>
 						<label for="loginUsername">Username</label>
-						<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g.Cody007" value="<?php getInputValue('loginUsername')?>" required>
+						<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. Cody007" value="<?php getInputValue('loginUsername') ?>" required autocomplete="off">
 					</p>
 					<p>
 						<label for="loginPassword">Password</label>
 						<input id="loginPassword" name="loginPassword" type="password" placeholder="Your password" required>
 					</p>
 
-					<button type="submit" name="loginButton">Login</button>
+					<button type="submit" name="loginButton">LOG IN</button>
 
 					<div class="hasAccountText">
-						<span id="hideLogin"><p>Don't have an account yet? Signup here.<p></span>
+						<span id="hideLogin">Don't have an account yet? Signup here.</span>
 					</div>
 					
 				</form>
@@ -77,7 +77,7 @@
 				<form id="registerForm" action="register.php" method="POST">
 					<h2>Create your free account</h2>
 					<p>
-						<?php echo $account->getError(Constants::$usernameCharacters); ?>	
+						<?php echo $account->getError(Constants::$usernameCharacters); ?>
 						<?php echo $account->getError(Constants::$usernameTaken); ?>
 						<label for="username">Username</label>
 						<input id="username" name="username" type="text" placeholder="e.g. Cody007" value="<?php getInputValue('username') ?>" required>
@@ -86,13 +86,13 @@
 					<p>
 						<?php echo $account->getError(Constants::$firstNameCharacters); ?>
 						<label for="firstName">First name</label>
-						<input id="firstName" name="firstName" type="text" placeholder="e.g. Donald" value="<?php getInputValue('firstName') ?>" required>
+						<input id="firstName" name="firstName" type="text" placeholder="e.g. Dunald" value="<?php getInputValue('firstName') ?>" required>
 					</p>
 
 					<p>
 						<?php echo $account->getError(Constants::$lastNameCharacters); ?>
 						<label for="lastName">Last name</label>
-						<input id="lastName" name="lastName" type="text" placeholder="e.g. Mcduck" value="<?php getInputValue('lastName') ?>" required>
+						<input id="lastName" name="lastName" type="text" placeholder="e.g. McDuck" value="<?php getInputValue('lastName') ?>" required>
 					</p>
 
 					<p>
@@ -121,26 +121,30 @@
 						<input id="password2" name="password2" type="password" placeholder="Your password" required>
 					</p>
 
-					<button type="submit" name="registerButton">Sgn up</button>
+					<button type="submit" name="registerButton">SIGN UP</button>
 
 					<div class="hasAccountText">
 						<span id="hideRegister">Already have an account? Log in here.</span>
 					</div>
 					
 				</form>
+
+
+				<div id="loginText">
+					<h1>Get great podcasts to listen at any time</h1>
+					<h2>Discover a wide and amazing community</h2>
+					<h2>Listen to loads of podcasts for free</h2>
+					<ul>
+						<li>Discover topics you'll fall in love with</li>
+						<li>Create your own playlists</li>
+						<li>Follow mentors to keep up to date</li>
+					</ul>
+				</div>
 			</div>
 
-			<div class="loginText">
-				<h1>Get amazing podcasts, right now</h1>
-				<h2>Listen to loads of podcasts for free</h2>
-				<ul>
-					<li>Discover a great community</li>
-					<li>Create your own playlists</li>
-					<li>Follow topics of your inteerest to keep up to date</li>
-				</ul>
-			</div>
-	    </div>
-		
-    </div>
+
+		</div>
+	</div>
+
 </body>
 </html>

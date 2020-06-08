@@ -1,7 +1,7 @@
 <?php
 	class Account {
 
-		private $con; // Passing in the connection variable (con) and assign it to the class
+		private $con;
 		private $errorArray;
 
 		public function __construct($con) {
@@ -11,9 +11,9 @@
 
 		public function login($un, $pw) {
 
-			$pw = md5($pw);  // md5 is a encryption method. So password will be a gui of letters and numbers like this: f8f4fjdhs78s1afgfs
+			$pw = md5($pw);
 
-			$query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'"); //Selecting all the usernames and passwords in the users' table
+			$query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
 
 			if(mysqli_num_rows($query) == 1) {
 				return true;
@@ -24,16 +24,16 @@
 			}
 
 		}
-		
+
 		public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
 			$this->validateUsername($un);
 			$this->validateFirstName($fn);
 			$this->validateLastName($ln);
 			$this->validateEmails($em, $em2);
 			$this->validatePasswords($pw, $pw2);
-		
+
 			if(empty($this->errorArray) == true) {
-				//Insert into the database
+				//Insert into db
 				return $this->insertUserDetails($un, $fn, $ln, $em, $pw);
 			}
 			else {
@@ -50,11 +50,11 @@
 		}
 
 		private function insertUserDetails($un, $fn, $ln, $em, $pw) {
-			$encryptedPw = md5($pw); 
-			$profilePic = "/assets/images/profile-pics/Duck-in-the-pool.png";
+			$encryptedPw = md5($pw);
+			//$profilePic = "/assets/images/profile-pics/Duck-in-the-pool.png";
 			$date = date("Y-m-d");
 
-			$result = mysqli_query($this->con, "INSERT INTO users VALUES (NULL, '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
+			$result = mysqli_query($this->con, "INSERT INTO users VALUES ('', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
 
 			return $result;
 		}
@@ -65,9 +65,6 @@
 				array_push($this->errorArray, Constants::$usernameCharacters);
 				return;
 			}
-
-			
-			// Checking if username exists
 
 			$checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username='$un'");
 			if(mysqli_num_rows($checkUsernameQuery) != 0) {
@@ -101,8 +98,6 @@
 				array_push($this->errorArray, Constants::$emailInvalid);
 				return;
 			}
-
-			// Checking if the email hasn't already been taken
 
 			$checkEmailQuery = mysqli_query($this->con, "SELECT email FROM users WHERE email='$em'");
 			if(mysqli_num_rows($checkEmailQuery) != 0) {

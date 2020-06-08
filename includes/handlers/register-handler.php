@@ -32,10 +32,11 @@ if(isset($_POST['registerButton'])) {
 	$wasSuccessful = $account->register($username, $firstName, $lastName, $email, $email2, $password, $password2);
 
 	if($wasSuccessful == true) {
-		$_SESSION['userLoggedIn']=$username;
-		header("Location: index.php"); // Redirects the user to the main page
+		$_SESSION['userLoggedIn'] = $username;
+		header("Location: index.php");
 	}
 
 }
+
 
 ?>

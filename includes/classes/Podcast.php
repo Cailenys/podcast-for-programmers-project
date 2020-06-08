@@ -6,7 +6,7 @@
 		private $mysqliData;
 		private $title;
 		private $mentorId;
-		private $podcastCoverId;
+		private $albumId;
 		private $category;
 		private $duration;
 		private $path;
@@ -19,7 +19,7 @@
 			$this->mysqliData = mysqli_fetch_array($query);
 			$this->title = $this->mysqliData['title'];
 			$this->mentorId = $this->mysqliData['mentor'];
-			$this->podcastCoverId= $this->mysqliData['podcastCover'];
+			$this->albumId = $this->mysqliData['podcastcover'];
 			$this->category = $this->mysqliData['category'];
 			$this->duration = $this->mysqliData['duration'];
 			$this->path = $this->mysqliData['path'];
@@ -38,7 +38,7 @@
 		}
 
 		public function getAlbum() {
-			return new Album($this->con, $this->podcastCoverId);
+			return new Album($this->con, $this->albumId);
 		}
 
 		public function getPath() {

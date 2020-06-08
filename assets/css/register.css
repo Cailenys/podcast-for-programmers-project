@@ -1,16 +1,18 @@
-* {
-  font-family: 'Source Code Pro', monospace, "sans-serif", "Helvetica", "Arial";
-}
-
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   height: 100%;
 }
 
+*:focus {
+  outline: none;
+}
+
 #background {
   background-color: #130A09;
-  background-image: url(https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50bf/5ec9989090bd560c7d1d512a/ddf050b8b0da6a7e534a619caa838c54/listen-music.jpg);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50bf/5ec9989090bd560c7d1d512a/4434469e6c35fbce5eca893b2a7f0ecf/brown-background.jpg);
+  background-position: center;
   background-size: cover;
   display: table;
   height: 100%;
@@ -18,48 +20,56 @@ html, body {
 }
 
 #loginContainer * {
-  color: whitesmoke;
+  color: #fff;
+  font-family: 'Source Code Pro', monospace, "sans-serif", "Helvetica", "Arial";
   font-weight: normal;
   line-height: 1em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #23303A;
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #23303A;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #23303A;
-}
-
-::placeholder {
-  /* Most modern browsers support this now. */
-  color: #23303A;
-}
-
 #loginContainer {
   width: 80%;
-  margin: 0 auto 0 -20px;
+  margin: 0 auto;
   position: relative;
   max-width: 1024px;
 }
 
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+
 #inputContainer {
+  margin-top: 80px;
   width: 400px;
   padding: 45px;
   float: left;
-  border-right: 1px solid #999;
 }
 
-#inputConatiner h2 {
+#inputContainer h2 {
   text-align: center;
 }
 
@@ -69,18 +79,27 @@ html, body {
   display: block;
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid whitesmoke;
-  height: 27 px;
+  border-bottom: 1px solid #fff;
+  height: 27px;
   line-height: 27px;
   width: 100%;
 }
 
+#inputContainer label {
+  color: #a0a0a0;
+  font-size: 13px;
+  margin-top: 15px;
+  display: block;
+}
+
 #inputContainer button {
   background-color: transparent;
-  border: 2px solid whitesmoke;
+  border: 2px solid #fff;
   border-radius: 250px;
+  color: #fff;
   display: block;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
   margin: 20px auto;
   height: 41px;
   width: 100%;
@@ -106,34 +125,29 @@ html, body {
 }
 
 #loginText {
-  padding: 45px;
-  display: table-cell;
+  font-size: 14px;
 }
 
-#inputContainer label {
-  color: #a0a0a0;
-  font-size: 13px;
-  margin-top: 15px;
-  display: block;
-}
-
-.loginText h1 {
-  font-size: 50px;
+#loginText h1 {
+  margin-top: 120px;
+  color: #06ee63;
+  font-size: 25px;
   font-weight: bold;
 }
 
-.loginText h2 {
-  margin: 35px 0 0 35px;
+#loginText h2 {
+  margin: 35px 0;
 }
 
-.loginText ul {
+#loginText ul {
   padding: 0;
 }
 
-.loginText li {
-  font-size: 20px;
+#loginText li {
+  font-size: 15px;
   list-style-type: none;
   padding: 5px 30px;
+  background: url(../images/icons/checkmark.png) no-repeat 0 0;
 }
 
 #inputContainer .errorMessage {

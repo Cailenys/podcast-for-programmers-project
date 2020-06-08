@@ -17,9 +17,8 @@
 
 			$this->title = $album['title'];
 			$this->mentorId = $album['mentor'];
-			$this->category= $album['category'];
+			$this->category = $album['category'];
 			$this->podcastCoverPath = $album['podcastCoverPath'];
-
 		}
 
 		public function getTitle() {
@@ -36,10 +35,9 @@
 
 		public function getPodcastCoverPath() {
 			return $this->podcastCoverPath;
-        }
-        
+		}
 
-        public function getNumberOfPodcasts() {
+		public function getNumberOfPodcasts() {
 			$query = mysqli_query($this->con, "SELECT id FROM podcasts WHERE podcastcover='$this->id'");
 			return mysqli_num_rows($query);
 		}
@@ -57,6 +55,7 @@
 			return $array;
 
 		}
+
 
 	}
 ?>
