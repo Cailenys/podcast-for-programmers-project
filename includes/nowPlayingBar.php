@@ -211,6 +211,9 @@ function pausePodcast() {
 	$(".controlButton.pause").hide();
 	audioElement.pause();
 }
+
+
+
 </script>
 
 
@@ -269,6 +272,11 @@ function pausePodcast() {
 
 					<button class="controlButton repeat" title="Repeat button" onclick="setRepeat()">
 						<img src="assets/images/icons/repeat.png" alt="Repeat">
+					</button>
+
+					<button class="controlButton dowload" title="Dowload button" onclick="setDowload()">
+					<a href="./downloads/download.mp3" download><img src="assets/images/icons/download.png" alt="Dowload"></a>
+						
 					</button>
 
 				</div>
