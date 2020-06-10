@@ -48,8 +48,7 @@ This podcast application is dedicated to the programming community. So developer
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+) 
 
 
 -- --------------------------------------------------------
@@ -61,7 +60,7 @@ CREATE TABLE `category` (
 CREATE TABLE `mentors` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
 
 
 -- --------------------------------------------------------
@@ -75,14 +74,8 @@ CREATE TABLE `playlistpodcasts` (
   `podcastId` int(11) NOT NULL,
   `playlistId` int(11) NOT NULL,
   `playlistOrder` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
---
--- Dumping data for table `playlistpodcasts`
---
-
-INSERT INTO `playlistpodcasts` (`id`, `podcastId`, `playlistId`, `playlistOrder`) VALUES
-(1, 2, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -95,8 +88,7 @@ CREATE TABLE `playlists` (
   `name` varchar(50) NOT NULL,
   `owner` varchar(50) NOT NULL,
   `dateCreated` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+) 
 
 -- --------------------------------------------------------
 
@@ -110,7 +102,7 @@ CREATE TABLE `podcastcover` (
   `mentor` int(11) NOT NULL,
   `category` int(11) NOT NULL,
   `podcastCoverPath` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 
 -- --------------------------------------------------------
@@ -129,9 +121,7 @@ CREATE TABLE `podcasts` (
   `path` varchar(500) NOT NULL,
   `seriesOrder` int(11) NOT NULL,
   `plays` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
+) 
 
 -- --------------------------------------------------------
 
