@@ -132,9 +132,9 @@
 				</form>
 
 				<div id="loginText">
-					<h1>Get great podcasts to listen at any time</h1>
-					<h2>Discover a wide and amazing community</h2>
-					<h2>Listen to loads of podcasts for free</h2>
+					<h1>Explore free podcasts to listen to <br> at any time</h1>
+					<h2>Discover professional insights from experienced developers</h2>
+					<h2>Stay on top of trends in software programming</h2>
 					<ul>
 						<li>Discover topics you'll fall in love with</li>
 						<li>Create your own playlists</li>
