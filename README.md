@@ -1,5 +1,5 @@
 # Podcast for Programmers
-![Project Logo](https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50db/250x250/dace8e5b3bb3cc9a98d4603c4f784e55/Logo-readme.png)
+![Project Logo](https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50bf/5ec9989090bd560c7d1d50db/d8027d224cb68199f43ddc8c6057561f/logo.png)
 
 > Download free resources to listen to at any time!😃🙌
 
@@ -41,13 +41,6 @@ This podcast application is dedicated to the programming community. So developer
 
 #### SQL script
 
-
---
--- Database: `podcasts_for_programmers`
---
-
--- --------------------------------------------------------
-
 --
 -- Table structure for table `category`
 --
@@ -55,8 +48,7 @@ This podcast application is dedicated to the programming community. So developer
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+) 
 
 
 -- --------------------------------------------------------
@@ -68,7 +60,7 @@ CREATE TABLE `category` (
 CREATE TABLE `mentors` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
 
 
 -- --------------------------------------------------------
@@ -82,14 +74,8 @@ CREATE TABLE `playlistpodcasts` (
   `podcastId` int(11) NOT NULL,
   `playlistId` int(11) NOT NULL,
   `playlistOrder` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
---
--- Dumping data for table `playlistpodcasts`
---
-
-INSERT INTO `playlistpodcasts` (`id`, `podcastId`, `playlistId`, `playlistOrder`) VALUES
-(1, 2, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -102,8 +88,7 @@ CREATE TABLE `playlists` (
   `name` varchar(50) NOT NULL,
   `owner` varchar(50) NOT NULL,
   `dateCreated` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+) 
 
 -- --------------------------------------------------------
 
@@ -117,7 +102,7 @@ CREATE TABLE `podcastcover` (
   `mentor` int(11) NOT NULL,
   `category` int(11) NOT NULL,
   `podcastCoverPath` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 
 -- --------------------------------------------------------
@@ -136,9 +121,7 @@ CREATE TABLE `podcasts` (
   `path` varchar(500) NOT NULL,
   `seriesOrder` int(11) NOT NULL,
   `plays` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
+) 
 
 -- --------------------------------------------------------
 
