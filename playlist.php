@@ -23,7 +23,7 @@ $owner = new User($con, $playlist->getOwner());
 		<h2><?php echo $playlist->getName(); ?></h2>
 		<p>By <?php echo $playlist->getOwner(); ?></p>
 		<p><?php echo $playlist->getNumberOfPodcasts(); ?> Podcasts</p>
-		<button class="button" onclick="deletePlaylist('<?php echo $playlistId; ?>')">Delete Playlist </button>
+		<button class="button" onclick="deletePlaylist('<?php echo $playlistId; ?>')">DELETE PLAYLIST</button>
 
 	</div>
 
@@ -51,11 +51,11 @@ $owner = new User($con, $playlist->getOwner());
 
 					<div class='trackInfo'>
 						<span class='trackName'>" . $playlistPodcast->getTitle() . "</span>
-						<span class='artistName'>" . $podcastMentor->getName() . "</span>
+						<span class='mentorName'>" . $podcastMentor->getName() . "</span>
 					</div>
 
 					<div class='trackOptions'>
-						<input type='hidden' class= podcastId' value='" . $playlistPodcast->getId() . "'>
+						<input type='hidden' class='podcastId' value='" . $playlistPodcast->getId() . "'>
 						<img class='optionsButton' src='assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
 					</div>
 

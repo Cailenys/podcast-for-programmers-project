@@ -1,3 +1,28 @@
+/******************************************************************************************
+------------------------------------ TABLE OF CONTENT -------------------------------------
+1. Universal Styles (typograghy)
+2. Playing bar
+3. Navigation bar
+4. Search bar
+******************************************************************************************/
+
+/******************************************************************************************
+----------------------------------- COLOUR GUIDE ------------------------------------------
+# Dark black (backround): #130A09;
+# White (font):#fff;
+# Bright green (Title login text): #06ee63; 
+*******************************************************************************************
+******************************************************************************************/
+
+
+
+
+/**********************************************
+*
+1. Universal Styles (typograghy)
+*
+**********************************************/
+
 html, body {
 	padding: 0;
 	margin: 0;
@@ -16,10 +41,15 @@ html, body {
 
 body {
     background-color: #181818;
-    font-size: 14px;
+    font-size: 20px;
     min-width: 720px;
 }
 
+/**********************************************
+*
+2. Playing bar
+*
+**********************************************/
 #nowPlayingBarContainer {
 	width: 100%;
     background-color:  #282828;
@@ -139,7 +169,7 @@ body {
     width: 100%;
 }
 
-#nowPlayingLeft .trackInfo .artistName span {
+#nowPlayingLeft .trackInfo .mentorName span {
 	font-size: 12px;
     color: #a0a0a0;
 }
@@ -158,6 +188,12 @@ body {
 	min-height: 100%;
 	width: 100%;
 }
+
+/**********************************************
+*
+3. Navigation bar
+*
+**********************************************/
 
 #navBarContainer {
 	background-color: #000;
@@ -180,8 +216,8 @@ body {
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 
 .navBar .group {
@@ -219,6 +255,11 @@ body {
     padding-bottom: 90px;
     width: calc(100% - 220px);
 }
+/**********************************************
+*
+3. Main content
+*
+**********************************************/
 
 #mainContent {
     padding: 0 20px;
@@ -365,7 +406,7 @@ body {
     margin-bottom: 7px;
 }
 
-.artistInfo {
+.mentorInfo {
     text-align: center;
 }
 
@@ -394,7 +435,7 @@ body {
 
 .tracklistContainer h2,
 .gridViewContainer h2,
-.artistsContainer h2 {
+.mentorContainer h2 {
     text-align: center;
 }
 
@@ -402,6 +443,11 @@ body {
     cursor: pointer;
 }
 
+/**********************************************
+*
+3. Search bar
+*
+**********************************************/
 .searchContainer {
     background-color: #242424;
     padding: 20px 28px;
@@ -434,7 +480,7 @@ input:focus {
     background-color: #282828;
 }
 
-.searchResultRow .artistName span {
+.searchResultRow .mentorName span {
     color: #fff;
 }
 
@@ -447,6 +493,12 @@ input:focus {
     display: block;
     margin: 0 auto 20px auto;
 }
+
+/**********************************************
+*
+3. Playlist page
+*
+**********************************************/
 
 .playlistsContainer {
     padding: 10px 0;
@@ -491,6 +543,12 @@ input:focus {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
+/**********************************************
+*
+3.  User profile
+*
+**********************************************/
 
 .userInfo h1 {
     text-align: center;

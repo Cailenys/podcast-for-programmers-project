@@ -165,7 +165,9 @@ function setTrack(trackId, newPlaylist, play) {
 
 	$.post("includes/handlers/ajax/getPodcastJson.php", { podcastId: trackId }, function(data) {
 		//console.log(data); Test
+
 		var track = JSON.parse(data);
+		document.querySelector("#download").href = track.path;
 		
 		$(".trackName span").text(track.title); // Title of the podcast that is playing
 
@@ -274,8 +276,8 @@ function pausePodcast() {
 						<img src="assets/images/icons/repeat.png" alt="Repeat">
 					</button>
 
-					<button class="controlButton dowload" title="Dowload button" onclick="setDowload()">
-					<a href="./downloads/download.mp3" download><img src="assets/images/icons/download.png" alt="Dowload"></a>
+					<button class="controlButton dowload" title="Dowload button">
+					<a id="download" href="./downloads/download.mp3" download><img src="assets/images/icons/download.png" alt="Dowload"></a>
 						
 					</button>
 

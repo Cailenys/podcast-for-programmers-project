@@ -50,7 +50,8 @@
 	<div id="background">
 
 		<div id="loginContainer">
-
+			<div cass="logo"><img src="./assets/images/profile-pics/logo.png" alt="logo"></div>
+         
 			<div id="inputContainer">
 				<form id="loginForm" action="register.php" method="POST">
 					<h2>Login to your account</h2>
@@ -64,7 +65,7 @@
 						<input id="loginPassword" name="loginPassword" type="password" placeholder="Your password" required>
 					</p>
 
-					<button type="submit" name="loginButton">LOG IN</button>
+					<button type="submit" name="loginButton">LOGIN</button>
 
 					<div class="hasAccountText">
 						<span id="hideLogin">Don't have an account yet? Signup here.</span>
@@ -128,7 +129,6 @@
 					</div>
 					
 				</form>
-
 
 				<div id="loginText">
 					<h1>Get great podcasts to listen at any time</h1>

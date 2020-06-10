@@ -2,7 +2,7 @@
 include("includes/includedFiles.php");
 
 if(isset($_GET['term'])) {
-	$term = urldecode($_GET['term']);
+	$term = urldecode($_GET['term']); //Allows to search using spaces in between words
 }
 else {
 	$term = "";
@@ -18,17 +18,17 @@ else {
 
 <script>
 
-$(".searchInput").focus();
+$(".searchInput").focus(); // It would give the input field focus as soon as the page loads
 
-$(function() {
+$(function() { // It refresh the search page 
 	
-	$(".searchInput").keyup(function() {
+	$(".searchInput").keyup(function() { // As soon the user start typing it cancels the existing timer
 		clearTimeout(timer);
 
 		timer = setTimeout(function() {
 			var val = $(".searchInput").val();
 			openPage("search.php?term=" + val);
-		}, 2000);
+		}, 2000); // 2000 milliseconds (2seg) before executing the setTimeout function
 
 	})
 
@@ -43,13 +43,16 @@ $(function() {
 	<h2>Podcats</h2>
 	<ul class="tracklist">
 		
-		<?php
-		$podcastsQuery = mysqli_query($con, "SELECT id FROM podcasts WHERE title LIKE '$term%' LIMIT 10");
-
+	<!-- Searching for a Podcast -->
+	<?php
+		$podcastsQuery = mysqli_query($con, "SELECT id FROM podcasts WHERE title LIKE '$term%' LIMIT 10"); 
+																											
 		if(mysqli_num_rows($podcastsQuery) == 0) {
 			echo "<span class='noResults'>No podcast found matching " . $term . "</span>";
 		}
 
+		//Using the percentage after 'term', the search will return any characters after the characters typed 
+		// (the additional characters in the sentence)
 
 
 		$podcastIdArray = array();
@@ -75,7 +78,7 @@ $(function() {
 
 					<div class='trackInfo'>
 						<span class='trackName'>" . $albumPodcast->getTitle() . "</span>
-						<span class='artistName'>" . $albumMentor->getName() . "</span>
+						<span class='mentorName'>" . $albumMentor->getName() . "</span>
 					</div>
 
 					<div class='trackOptions'>
@@ -93,7 +96,7 @@ $(function() {
 			$i = $i + 1;
 		}
 
-		?>
+	?>
 
 		<script>
 			var tempPodcastIds = '<?php echo json_encode($podcastIdArray); ?>';
@@ -103,14 +106,15 @@ $(function() {
 	</ul>
 </div>
 
+<!-- Searching for a specific mentor's name -->
 
-<div class="artistsContainer borderBottom">
+<div class="mentorContainer borderBottom">
 
-	<h2>Mentor</h2>
+	<h2>Mentors</h2>
 
 	<?php
-	$mentorsQuery = mysqli_query($con, "SELECT id FROM podcasts WHERE mentor LIKE '$term%' LIMIT 10");
-	
+	$mentorsQuery = mysqli_query($con, "SELECT id FROM mentors WHERE name LIKE '%$term%' LIMIT 10");
+	///Using the percentage after and before or term, the search will return any characters after and before the characters typed 
 	if(mysqli_num_rows($mentorsQuery) == 0) {
 		echo "<span class='noResults'>No mentor found matching " . $term . "</span>";
 	}
@@ -120,9 +124,9 @@ $(function() {
 		$mentorFound = new Mentor($con, $row['id']);
 
 		echo "<div class='searchResultRow'>
-				<div class='artistName'>
+				<div class='mentorName'>
 
-					<span role='link' tabindex='0' onclick='openPage(\"artist.php?id=" . $mentorFound->getId() ."\")'>
+					<span role='link' tabindex='0' onclick='openPage(\"mentor.php?id=" . $mentorFound->getId() ."\")'>
 					"
 					. $mentorFound->getName() .
 					"
@@ -161,10 +165,11 @@ $(function() {
 
 				</div>";
 
-
-
 		}
 	?>
+
+</div>
+
 
 </div>
 
