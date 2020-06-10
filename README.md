@@ -1,5 +1,5 @@
 # Podcast for Programmers
-![Project Logo](https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50db/250x250/dace8e5b3bb3cc9a98d4603c4f784e55/Logo-readme.png)
+![Project Logo](https://trello-attachments.s3.amazonaws.com/5ec9989090bd560c7d1d50bf/5ec9989090bd560c7d1d50db/d8027d224cb68199f43ddc8c6057561f/logo.png)
 
 > Download free resources to listen to at any time!😃🙌
 
