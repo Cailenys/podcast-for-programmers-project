@@ -19,7 +19,8 @@ else {
 
 ?>
 
-<html>
+<html lang="en">
+
 <head>
 	<title>Welcome to Podcasts for Programmers!</title>
 

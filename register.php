@@ -15,7 +15,8 @@
 	}
 ?>
 
-<html>
+<html lang="en">
+	
 <head>
 	<title>Welcome to Podcast for Programmers!</title>
 
