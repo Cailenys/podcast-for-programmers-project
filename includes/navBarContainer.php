@@ -23,7 +23,7 @@
 			</div>
 
 			<div class="navItem">
-				<span role="link" tabindex="0" onclick="openPage('yourPodcasts.php')" class="navItemLink">play</span>
+				<span role="link" tabindex="0" onclick="openPage('yourPodcasts.php')" class="navItemLink">Your playlists</span>
 			</div>
 
 			<div class="navItem">
