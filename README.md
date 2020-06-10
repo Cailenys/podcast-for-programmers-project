@@ -41,13 +41,6 @@ This podcast application is dedicated to the programming community. So developer
 
 #### SQL script
 
-
---
--- Database: `podcasts_for_programmers`
---
-
--- --------------------------------------------------------
-
 --
 -- Table structure for table `category`
 --
