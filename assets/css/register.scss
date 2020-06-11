@@ -128,10 +128,14 @@ body {
 	text-align: center;
 }
 
-#registerForm,
+
 #loginContainer .logo img{
     margin-left: 200px;
     margin-top: 110px;   
+}
+
+#registerForm{
+    margin-left: 200px; 
 }
 #loginForm {
     display: none;
@@ -199,11 +203,12 @@ body {
         width: 550px;
     }
 
-    #registerForm,
+
     #loginContainer img{
         margin-left: 200px;
         margin-top: 20px;
     }  
+
     
     #inputContainer label {
         color: #fff;

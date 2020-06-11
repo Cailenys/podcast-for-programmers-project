@@ -39,7 +39,7 @@
 
 		public function getPodcastIds() {
 
-			$query = mysqli_query($this->con, "SELECT podcastId  FROM playodcasts WHERE playlistId='$this->id' ORDER BY playlistOrder ASC");
+			$query = mysqli_query($this->con, "SELECT podcastId  FROM playlistpodcasts WHERE playlistId='$this->id' ORDER BY playlistOrder ASC");
 
 			$array = array();
 

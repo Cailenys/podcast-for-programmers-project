@@ -49,10 +49,9 @@
 	
 
 	<div id="background">
-
+	 
 		<div id="loginContainer">
-			<div cass="logo"><img src="./assets/images/profile-pics/logo.png" alt="logo"></div>
-         
+		<div id="logo"><img src="./assets/images/profile-pics/logo.png" alt="logo"></div>
 			<div id="inputContainer">
 				<form id="loginForm" action="register.php" method="POST">
 					<h2>Login to your account</h2>
