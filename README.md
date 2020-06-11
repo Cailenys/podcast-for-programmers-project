@@ -27,7 +27,7 @@ This podcast application is dedicated to the programming community. So developer
 - JQuery
 - CSS
 - HTML
-- Wordpress
+
 
 [Back To The Top](#Podcast-for-Programmers)
 
