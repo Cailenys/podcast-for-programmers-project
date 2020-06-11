@@ -144,7 +144,7 @@ CREATE TABLE `users` (
 
 ```php
 <?php
-    $result = mysqli_query($this->conn, "INSERT INTO users VALUES (NULL, '$un', '$fn', '$ln', '$em', '$encryptedPW', '$date', '$profilePic')");
+    $result = mysqli_query($this->con, "INSERT INTO users VALUES ('', '$un', '$fn', '$ln', '$em', '$encryptedPW', '$date', '$profilePic')");
 ?>
 ```
 The way how you will run this script is by introducing values in the sign-up form. The program will connect with the database and then it will introduce the values submitted in the user table.
