@@ -151,7 +151,7 @@ function setTrack(trackId, newPlaylist, play) {
 
 	if(newPlaylist != currentPlaylist) {
 		currentPlaylist = newPlaylist;
-		shufflePlaylist = currentPlaylist.slice();
+		shufflePlaylist = currentPlaylist.slice(); // .slice returns a copy of the array (playlist)
 		shuffleArray(shufflePlaylist);
 	}
 

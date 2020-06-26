@@ -22,7 +22,7 @@ if(isset($_POST['email']) && $_POST['email'] != "") {
 		exit();
 	}
 
-	$updateQuery = mysqli_query($con, "UPDATE users SET email = '$email' WHERE username='$username'");
+	$updateQuery = mysqli_query($con, "UPDATE users SET email= '$email' WHERE username='$username'");
 	echo "Update successful";
 
 }

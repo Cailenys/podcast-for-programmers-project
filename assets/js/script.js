@@ -92,9 +92,9 @@ function openPage(url) {
 }
 
 function removeFromPlaylist(button, playlistId) {
-	var songId = $(button).prevAll(".podcastId").val();
+	var podcastId = $(button).prevAll(".podcastId").val();
 
-	$.post("includes/handlers/ajax/removeFromPlaylist.php", { playlistId: playlistId, songId: songId })
+	$.post("includes/handlers/ajax/removeFromPlaylist.php", { playlistId: playlistId, PodcastId: PodcastId })
 	.done(function(error) {
 
 		if(error != "") {

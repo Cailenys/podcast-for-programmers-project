@@ -237,6 +237,18 @@ body {
   #inputContainer ::placeholder {
     font-size: 14px;
   }
+  #registerForm ::-webkit-input-placeholder {
+    color: white;
+  }
+  #registerForm :-ms-input-placeholder {
+    color: white;
+  }
+  #registerForm ::-ms-input-placeholder {
+    color: white;
+  }
+  #registerForm ::placeholder {
+    color: white;
+  }
   #inputContainer .errorMessage {
     color: #06ee63;
     font-size: 13px;

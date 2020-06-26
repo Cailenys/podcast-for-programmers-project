@@ -12,5 +12,8 @@ $(document).ready(function() {
 	$("#hideRegister").click(function() {
 		$("#loginForm").show();
 		$("#registerForm").hide();
+		$("#logo").show();
+		$("#loginText").show();
 	});
 });
+

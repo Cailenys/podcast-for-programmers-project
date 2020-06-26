@@ -238,6 +238,9 @@ body {
     #inputContainer ::placeholder{
         font-size: 14px;
     }
+    #registerForm ::placeholder{
+        color:white;
+    }
 
     #inputContainer .errorMessage {
         color:#06ee63;
